@@ -15,7 +15,6 @@
             <input type='radio' name='suhu_awal' value='Rheamur' <?php if (isset($_POST['suhu_awal']) && $_POST['suhu_awal'] == "Rheamur") echo "checked"; ?>> Rheamur <br>
             <input type='radio' name='suhu_awal' value='Kelvin' <?php if (isset($_POST['suhu_awal']) && $_POST['suhu_awal'] == "Kelvin") echo "checked"; ?>> Kelvin <br>
 
-
             Ke: <br>
             <input type='radio' name='suhu_tujuan' value='Celcius' <?php if (isset($_POST['suhu_tujuan']) && $_POST['suhu_tujuan'] == "Celcius") echo "checked"; ?>> Celcius <br>
             <input type='radio' name='suhu_tujuan' value='Fahrenheit' <?php if (isset($_POST['suhu_tujuan']) && $_POST['suhu_tujuan'] == "Fahrenheit") echo "checked"; ?>> Fahrenheit <br>
