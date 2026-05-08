@@ -5,8 +5,8 @@
     </head>
     <body>
         <form action='' method='post'>
-            Batas Bawah: <input type='number' name='bawah' required> <br>
-            Batas Atas: <input type='number' name='atas' required> <br>
+            Batas Bawah: <input type='number' name='bawah' value="<?= isset($_POST['bawah']) ? $_POST['bawah'] : ''?>" required> <br>
+            Batas Atas: <input type='number' name='atas' required value="<?= isset($_POST['atas']) ? $_POST['atas'] : ''?>" required> <br>
             <input type='submit' value='Cetak'>
         </form>
 
