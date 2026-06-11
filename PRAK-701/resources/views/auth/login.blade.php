@@ -88,7 +88,6 @@
         .btn-login:hover {
             background: #0b5ed7;
         }
-        /* Style untuk Notifikasi Error / Peringatan */
         .alert-danger {
             background-color: #f8d7da;
             border-left: 4px solid #dc3545;
