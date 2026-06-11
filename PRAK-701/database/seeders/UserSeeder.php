@@ -8,15 +8,12 @@ use Illuminate\Support\Facades\Hash;
 
 class UserSeeder extends Seeder
 {
-    /**
-     * Run the database seeds.
-     */
     public function run(): void
     {
         User::create([
             'name' => 'Admin Perpustakaan',
             'email' => 'admin@perpus.com',
-            'password' => Hash::make('password123'), // Password dienkripsi agar aman
+            'password' => Hash::make('password123'), 
         ]);
     }
 }
