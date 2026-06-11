@@ -67,7 +67,6 @@ class MemberController extends Controller
         return redirect()->route('member.index')->with('success', 'Data member berhasil diperbarui!');
     }
 
-    // DELETE: Menghapus data member (Pengganti deleteMember)
     public function destroy($id)
     {
         DB::table('member')->where('id_member', $id)->delete();
