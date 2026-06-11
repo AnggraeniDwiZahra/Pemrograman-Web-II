@@ -122,7 +122,6 @@
             <p>Silakan masuk menggunakan akun pengguna</p>
         </div>
 
-        {{-- TEMPAT MENAMPILKAN NOTIFIKASI EDGE CASE (SALAH DATA / BELUM LOGIN) --}}
         @if($errors->has('loginError'))
             <div class="alert-danger">
                 <i class="fa-solid fa-circle-exclamation"></i>
@@ -130,8 +129,15 @@
             </div>
         @endif
 
+        @if(session('unauthenticated'))
+            <div class="alert-danger">
+                <i class="fa-solid fa-circle-exclamation"></i>
+                <span>{{ session('unauthenticated') }}</span>
+            </div>
+        @endif
+
         <form action="{{ url('/login') }}" method="POST">
-            @csrf {{-- Token Keamanan Laravel --}}
+            @csrf 
             
             <div class="form-group">
                 <label for="email">Email Pengguna</label>
