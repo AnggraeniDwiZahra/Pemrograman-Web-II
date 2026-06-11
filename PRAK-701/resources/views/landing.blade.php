@@ -201,9 +201,15 @@
             <i class="fa-solid fa-book-bookmark"></i> Arutala Lib
         </a>
         <nav>
-            <a href="#" class="active">Home</a>
+            <a href="{{ route('landing') }}" class="active">Home</a>
+            <a href="{{ route('dashboard') }}">Dashboard</a>
+            <a href="{{ route('buku.index') }}">Data Buku</a>
+            
             @auth
-                <a href="{{ route('dashboard') }}" class="btn-login">Dashboard</a>
+                <form action="{{ route('logout') }}" method="POST" style="display: inline;">
+                    @csrf
+                    <button type="submit" class="btn-login" style="border: none; font-size: 15px; cursor: pointer;">Keluar</button>
+               </form>
             @else
                 <a href="{{ route('login') }}" class="btn-login">Masuk</a>
             @endauth
