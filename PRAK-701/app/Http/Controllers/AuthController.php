@@ -7,10 +7,14 @@ use Illuminate\Support\Facades\Auth;
 
 class AuthController extends Controller
 {
-    public function showLogin()
+    public function showLogin(Request $request)
     {
         if (!auth()->check() && request()->has('error')) {
             return view('auth.login')->withErrors(['loginError' => 'Login terlebih dahulu!']);
+        }
+
+        if (request()->has('unauthenticated')) {
+            session()->flash('unauthenticated', 'Login terlebih dahulu!');
         }
         
         return view('auth.login');
